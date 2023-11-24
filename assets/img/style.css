@@ -1,17 +1,27 @@
-*{
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+    --gold1:#F4BD76;
+    --gold2:#F6CD8F;
+    --gray:#ffffff80;
+    --gray2:#f7d9d990;
+    --black1: #1A1B1F;
+    --black2: #30353B;
+    --shadow: 0 8px 8px;
+    --color_shadow: #00000033;
+}
+
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Roboto', sans-serif;
 }
-.header{
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(180deg, #30353B 0%, #1A1B1F 100%);
-}
-.box-default{
+
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -19,147 +29,185 @@ body{
     padding: 100px 0;
     height: auto;
 }
-.header__container{
+
+.container--modifier {
+    width: 60%;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+}
+
+.nav__hero{
     color: #fff;
     height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     height: inherit;
     padding: 0;
 }
+
 .logo__name {
     font-size: 24px;
 }
-/*Point*/
-.logo__subname, .services__title-active,.proyects__title-active, .card__title-active{
-    color:#F4BD76;
-}
-.menu__link{
+
+.link{
+    display: inline-block;
     color: inherit;
     text-decoration: none;
     font-weight: 300;
     padding: 10px;
 }
-.menu__list{
-    display: flex;
-    list-style: none;
+
+.links a:hover{
+    color: var(--gold1);
+    font-weight: 700;
 }
-.nav__header {
-    color: #fff;
-    height: 70px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+/* .link--active{
+    color: var(--gold1);
+    font-weight: 700;
+} */
+
+.point{
+    color: var(--gold1);
 }
-.home{
+
+.hero__main{
     height: calc(100vh - 70px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding:0;
-    width: 100vw;
-}
-.home__content{
-    width: 48%;
-}
-.home__title {
-    font-size: 56px;
-    font-weight: 300;
-    color: #fff;
-}
-.home__title-active {
-    color: #F4BD76;
-    font-weight: 700;
-}
-.home__text {
-    font-size: 24px;
-    color:#ffffff80;
-    text-shadow: 0 8px 8px #00000033;
-    margin: 15px 0;
 }
 
-.home__text-active{
-    font-weight: 700;
-}
-.home__button{
-    padding: 20px 30px;
-    display: inline-block;
-    background: linear-gradient(180deg, #f7ce90 0%, #f4bd76 100%);
-    text-decoration: none;
-    color: #30353B;
-    font-weight: 700;
-    box-shadow: 0 8px 8px #00000033;
-    border-radius: 6px;
-}
-.home__img{
+.mockup{
     object-fit: cover;
     width: 48%;
     max-height: 90vh;
 }
-.services{
+
+.hero__textos{
+    width: 48%;
+}
+
+.title {
+    font-size: 56px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.title--active {
+    color: var(--gold1);
+    font-weight: 700;
+}
+
+.copy {
+    font-size: 24px;
+    color: var(--gray);
+    text-shadow: var(--shadow) var(--color_shadow);
+    margin: 15px 0;
+}
+
+.copy__active{
+    font-weight: 700;
+}
+
+.cta {
+    padding: 20px 30px;
+    display: inline-block;
+    background: linear-gradient(180deg, #f7ce90 0%, #f4bd76 100%);
+    text-decoration: none;
+    color: var(--black2);
+    font-weight: 700;
+    box-shadow: var(--shadow) var(--color_shadow);
+    border-radius: 6px;
+}
+
+/* services */
+
+.services {
     background: #fafafa;
 }
-/*Titulos*/
-.services__title, .proyects__title, .valoraciones__title{
+
+.subtitle {
     font-size: 42px;
 }
-/*Textos*/
-.services__text, .proyects__text, .valoraciones__text{
-    color: #30353B;
+
+.subtitle--modifier{
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.copy__section{
+    color: var(--black2);
     font-size: 22px;
     line-height: 32px;
     margin-bottom: 60px;
 }
-.services-cards{
+
+.copy__section--modifier{
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.container-cards{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
-.proyects-cards{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
+
 .card{
     width: 30%;
     padding: 30px 0;
     overflow: hidden;
     background: #000;
-    background: linear-gradient(180deg, #30353B 0%, #1A1B1F 100%);
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
     border-radius: 10px;
     position: relative;
     text-align: right;
     margin-bottom: 60px;
     box-shadow: 0 0 6px var(--color_shadow);
 }
+
 .card__img{
-    width: 93%;
+    width: 95%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px 0 0 10px;
 }
-.cards__info{
+
+.cards__text{
     text-align: left;
     width: 90%;
     margin: 0 auto;
 }
-.card__subtitle{
-    color: #F4BD76;
+
+.card__list{
+    color: var(--gold2);
     font-weight: 700;
     margin: 25px 0 12px 0;
     font-size: 18px;
     position: relative;
 }
+
+
 .card__title{
     font-size: 40px;
     color: #fff;
     margin-bottom: 8px;
 }
 
-.card__text{
-    color: #f7d9d990 ;
+.card__copy{
+    color: var(--gray2);
     margin-bottom: 16px;
 }
 
@@ -169,17 +217,29 @@ body{
     border-radius: 6px;
     text-decoration: none;
     width: 100%;
-    color: #1A1B1F;
+    color: var(--black1);
     font-weight: 700;
     text-align: center;
     padding: 12px 0;
 }
+
 .card__date{
-    color: #F6CD8F;
+    color: var(--gold2);
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 16px;
 }
-.proyects__container-img{
+
+.container-bg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.background{
     width: 68%;
     height: 290px;
     border-radius: 10px;
@@ -187,14 +247,14 @@ body{
     margin-bottom: 60px;
 }
 
-.proyects__img {
+.background__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
 }
 
-.proyects__info-img{
+.background__text{
     position: absolute;
     width: 100%;
     bottom: 30px;
@@ -202,23 +262,23 @@ body{
     color: #fff;
 }
 
-.proyects__info-title {
+.background__title {
     font-size: 24px;
     margin-bottom: 4px;
 }
-/*Valoraciones*/
-.valoraciones{
+
+.testimony{
     background: #fafafa;
 }
 
-.valoraciones-container{
+.testimony-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.valoraciones__card{
+.testimony__card{
     width: 30%;
     height: 500px;
     background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
@@ -227,7 +287,7 @@ body{
     margin-bottom: 30px;
 }
 
-.valoraciones__img{
+.testimony__img{
     width: 100%;
     height: 100%;
     border-radius: inherit;
@@ -235,41 +295,43 @@ body{
     object-position: center top;
 }
 
-.valoraciones__copy{
+.testimony__copy{
     position: absolute;
     bottom: 20px;
     left: 5%;
     width: 90%;
-    background: linear-gradient(180deg, #30353B 0%, #1A1B1F 100%);
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
     color: #fff;
     margin: auto;
     border-radius: 10px;
-    box-shadow: 0 8px 8px #00000033;
+    box-shadow: var(--shadow) var(--color_shadow);
     padding: 15px 8px;
     display: flex;
     align-items: center;
 }
 
-.valoraciones__copy--modifier{
+.testimony__copy--modifier{
     background: none;
     box-shadow: none;
 }
 
-.valoraciones__logo{
+.testimony__logo{
     font-size: 40px;
     margin-right: 15px;
+    display: inline-block;
+
 }
 
-.valoraciones__name{
+.testimony__name{
     font-size: 24px;
     line-height: 28px;
 }
 
-.valoraciones__position{
-    color: #ffffff80;
+.testimony__position{
+    color: var(--gray);
 }
 
-.valoraciones__info{
+.testimony__text{
     padding: 40px 0;
     width: 90%;
     margin: 0 auto;
@@ -280,7 +342,7 @@ body{
     margin-bottom: 20px;
 }
 
-.valoraciones__history {
+.testimony__history {
     font-size: 21px;
     font-weight: 300;
 }
@@ -292,27 +354,230 @@ body{
     border-radius: 50%;
     object-position: center top;
 }
-.valoraciones__info{
+.testimony__info{
     width: 70%;
 }
 
+/* Check */
 
+.check{ 
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.check__item{
+    width: 30%;
+    padding-right: 10px;
+    display: flex;
+    border-right: 2px solid var(--black2);
+}
+
+.bx-check{
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-right: 20px;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.check__number{
+    font-weight: 700;
+}
+
+.check__copy{
+    font-weight: 300;
+}
+
+.newsletter{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: auto;
+    font-family: inherit;
+    position: relative;
+    border-radius: 6px;
+}
+
+.newsletter--modifier{
+    margin: 0;
+    width: 80%;
+}
+
+.newsletter__input{
+    width: 100%;
+    height: 100%;
+    padding: 22px 10px;
+    outline: none;
+    font-family: inherit;
+    border-radius: 6px;
+    border: 1px solid var(--black1);
+}
+
+.newsletter__submit{
+    position: absolute;
+    right: 8px;
+    top: 10%;
+    height: 80%;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    color: #fff;
+    padding: 0 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.footer{
+    background: #fafafa;
+}
+
+.footer__caption{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+}
+
+.title__footer{
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.download{
+    width: 50%;
+}
+
+.download__app{
+    display: flex;
+}
+
+.download__item{
+    display: flex;
+    padding: 18px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--black2);
+    width: 42%;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.download__logo{
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.download__title{
+    font-size: 18px;
+}
+
+.footer__copy{
+    width: 100%;
+    color: var(--black2);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.copyright{
+    width: 100%;
+}
+
+.politica__privacidad{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.politica__privacidad:hover{
+    text-decoration: underline;
+}
+
+.politica__privacidad--margin{
+    margin-right: 10px;
+}
+
+.get-email{
+    width: 50%;
+}
+
+.socialmedia{
+    margin-top: 24px;
+    display: flex;
+    color: var(--black2);
+}
+
+.socialmedia__icon{
+    font-size: 18px;
+    margin-right: 16px;
+    display: inline-block;
+}
+
+.socialmedia__legend{
+    color: var(--black2);
+    margin-right: 16px;
+}
+
+.contact{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+.item__contact{
+    width: 25%;
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+}
+
+.item__contact--gold{
+    background: linear-gradient(180deg, #f7ce90 0%, #f4bd76 100%);
+    color: var(--black1);
+}
+
+.contact__icon{
+    font-size: 14px;
+    color: var(--gold1);
+    line-height: 20px;
+    margin-right: 4px;
+}
+
+.contact__icon--modifier{
+    font-size: 14px;
+    color: var(--black1);
+    line-height: 20px;
+    margin-right: 4px;
+}
+
+.contact__title{
+    font-size: 16px;
+    line-height: 20px;
+}
 
 @media screen and (max-width:900px) {
-    .home__img{
+    .mockup{
         width: 600px;
         height: auto;
     }
 
-    .home__title{
+    .title{
         font-size: 50px;
     }
 
-    .home__text{
+    .copy{
         font-size: 22px;
     }
 
-    .home__button{
+    .cta{
         padding: 15px 22px;
     }
 
@@ -324,7 +589,7 @@ body{
         width: 45%;
     }
 
-    .proyects__container-img{
+    .background{
         width: 52%;
     }
 
@@ -332,11 +597,11 @@ body{
         width: 42%;
     }
 
-    .valoraciones-container{
+    .testimony-container{
         justify-content: space-evenly;
     }
 
-    .valoraciones__card{
+    .testimony__card{
         width: 45%;
     }
 
@@ -387,7 +652,7 @@ body{
         justify-content: space-evenly;
     }
 
-    .nav__header{
+    .nav__hero{
         height: auto;
     }
 
@@ -396,37 +661,37 @@ body{
         text-align: center;
     }
 
-    .menu__list{
+    .links{
         padding-bottom: 10px;
         text-align: center;
     }
 
-    .menu__link{
+    .link{
         padding: 7px 10px;
         }
 
-    .home {
+    .hero__main {
         flex-direction: column-reverse;
         justify-content: flex-end;
         height: auto;
         padding: 30px ;
     }
 
-    .home__content{
+    .hero__textos{
         width: 100%;
         text-align: center;
     }
 
-    .home__img{
+    .mockup{
         width: 60%;
         margin-bottom: 20px;
     }
 
-    .home__title{
+    .title{
         font-size: 35px;
     }
 
-    .home__text{
+    .copy{
        font-size: 35px;
     }
 
@@ -435,7 +700,7 @@ body{
         text-align: center;
     }
 
-    .services__text{
+    .copy__Section{
         font-size: 20px;
         text-align: center;
     }
@@ -444,7 +709,7 @@ body{
         width: 80%;
     }
 
-    .proyects-cards{
+    .container-bg{
         justify-content: space-evenly;
     }
 
@@ -461,20 +726,20 @@ body{
         width: 100%;
     }
 
-    .proyects__container-img {
+    .background {
         width: 65%;
         margin-bottom: 65px;
     }
 
-    .proyects__info-text{
+    .background__copy{
         display: none;
     }
 
-    .valoraciones__card{
+    .testimony__card{
         width: 65%;
     }
 
-    .valoraciones__name{
+    .testimony__name{
         font-size: 20px;
     }
 
@@ -490,7 +755,7 @@ body{
 }
 
 @media screen and (max-width:500px){
-    .home__img{
+    .mockup{
         width: 80%;
         margin-bottom: 15px;
     }
@@ -498,15 +763,20 @@ body{
     .services .card {
         width: 95%;
     }
-    .proyects__container-img{
+
+    .card{
         width: 95%;
     }
 
-    .valoraciones__card{
+    .background{
         width: 95%;
     }
 
-    .valoraciones__history{
+    .testimony__card{
+        width: 95%;
+    }
+
+    .testimony__history{
         font-size: 20px;
     }
 
