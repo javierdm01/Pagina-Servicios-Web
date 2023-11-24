@@ -494,12 +494,17 @@ body{
     line-height: 20px;
 }
 
+/*Media Queerys*/
 
-
-@media screen and (max-width:1200px) {
+@media screen and (min-width:1200px) {
     .home__img{
         width: 600px;
         height: auto;
+        position: absolute;
+        left: 50%;
+        animation-name: updown;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
     }
 
     .home__title{
@@ -737,5 +742,17 @@ body{
 
     .download__logo{
         font-size: 30px;
+    }
+}
+
+@keyframes updown {
+    0%{
+        top: 180px;
+    }
+    50%{
+        top: 220px;
+    }
+    100%{
+        top: 180px;
     }
 }
