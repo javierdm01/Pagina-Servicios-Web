@@ -101,6 +101,9 @@ body{
 /*-----------------Servivcios-------------------*/
 .services{
     background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /*----------Titulos---------*/
 .services__title, .proyects__title, .valoraciones__title{
@@ -119,6 +122,7 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-left: 10%;
 }
 .proyects-cards{
     display: flex;
@@ -214,6 +218,9 @@ body{
 /*---------------Valoraciones-----------*/
 .valoraciones{
     background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .valoraciones-container{
@@ -226,7 +233,7 @@ body{
 .valoraciones__card{
     width: 30%;
     height: 500px;
-    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    background: linear-gradient(180deg, #30353B 0%, #1A1B1F 100%);
     border-radius: 10px;
     position: relative;
     margin-bottom: 30px;
