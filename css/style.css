@@ -6,11 +6,18 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+.container{
+    display: grid;
+    grid-template-areas: 'header'
+                         'main'
+                         'footer';
+    grid-template-rows: 100vh 3300px 565px;
+}
 /*-------------Header-------------*/
 .header{
     width: 100%;
-    min-height: 100vh;
     background: linear-gradient(180deg, #30353B 0%, #1A1B1F 100%);
+    grid-area: 'header';
 }
 .box-default{
     width: 90%;
@@ -38,6 +45,9 @@ body{
     color:#F4BD76;
 }
 /*-----------Menú-----------*/
+.hamburguesa__menu{
+    display: none;
+}
 .menu__link{
     color: inherit;
     text-decoration: none;
@@ -98,7 +108,11 @@ body{
     width: 48%;
     max-height: 90vh;
 }
+
 /*-----------------Servivcios-------------------*/
+.main{
+    grid-area: 'main';
+}
 .services{
     background: #fafafa;
     display: flex;
@@ -138,15 +152,29 @@ body{
     background: linear-gradient(180deg, #30353B 0%, #1A1B1F 100%);
     border-radius: 10px;
     position: relative;
-    text-align: right;
+    text-align: center;
     margin-bottom: 60px;
     box-shadow: 0 0 6px #00000033;
 }
 .card__img{
-    width: 93%;
+    width: 90%;
     height: 200px;
-    object-fit: cover;
-    border-radius: 10px 0 0 10px;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-size: cover  ;
+    border-radius: 10px;
+    margin: auto 5%;
+}
+.webapp{
+    background-image: url(../assets/img/image1.jpg);
+    background-position: 1px;
+}
+.design_web{
+    background-image: url(../assets/img/image2.jpg);
+}
+.ecommerce{
+    background-image: url(../assets/img/image3.jpg);
+    background-position: 5px;
 }
 .cards__info{
     text-align: left;
@@ -247,7 +275,7 @@ body{
     object-position: center top;
 }
 
-.valoraciones__copy{
+.valoraciones__box{
     position: absolute;
     bottom: 20px;
     left: 5%;
@@ -262,7 +290,7 @@ body{
     align-items: center;
 }
 
-.valoraciones__copy--modifier{
+.valoraciones__box--modifier{
     background: none;
     box-shadow: none;
 }
@@ -389,6 +417,7 @@ body{
 /*------------------Footer-----------------------*/
 .footer{
     background: #fafafa;
+    grid-area: 'footer';
 }
 .footer__container{
     display: flex;
@@ -495,10 +524,12 @@ body{
 }
 
 /*Media Queerys*/
-
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1200px){
+    .home{
+        position: relative;
+    }
     .home__img{
-        width: 600px;
+        width: 500px;
         height: auto;
         position: absolute;
         left: 50%;
@@ -506,7 +537,11 @@ body{
         animation-duration: 4s;
         animation-iteration-count: infinite;
     }
-
+}
+@media screen and (max-width:1200px) {
+    .container{
+        grid-template-rows: 100vh 4500px ;
+    }
     .home__title{
         font-size: 50px;
     }
@@ -579,6 +614,9 @@ body{
 }
 
 @media screen and (max-width:900px) {
+    .container{
+        grid-template-rows: 100vh 6200px ;
+    }
     main .container,
     footer .container{
         padding: 60px 0;
@@ -692,31 +730,80 @@ body{
 
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:600px){
+    .container{
+        grid-template-rows: 80vh ;
+    }
+    .header__container{
+        display: inline-block;
+    }
+    .logo{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo__name{
+        text-align: left;
+    }
+    .hamburguesa__menu{
+        display: block;
+    }
+    .menu__list{
+        display: none;
+    }
+    .home{
+        margin-top: 100px;
+    }
     .home__img{
         width: 80%;
         margin-bottom: 15px;
+        position: relative;
+        top: auto;
+        display: none;
+        left: auto;
     }
 
     .services .card {
         width: 95%;
     }
+    .card__subtitle{
+        text-align: center;
+    }
+    .card__title{
+        text-align: center;
+    }
+    .webapp{
+        background-position: 5px;
+    }
+    .card__title-active{
+        text-align: center;
+    }
+    .card__text{
+        display: none;
+    }
     .proyects__container-img{
         width: 95%;
     }
-
+    .proyect__card{
+        display: none;
+    }
     .valoraciones__card{
         width: 95%;
     }
-
+    .valoraciones__box{
+        display: none;
+    }
     .valoraciones__history{
         font-size: 20px;
     }
-
+    .google-card{
+        display: none;
+    }
     .email{
         width: 90%;
     }
-
+    .check{
+        display: none;
+    }
     .newsletter{
         width: 100%;
     }
@@ -743,16 +830,39 @@ body{
     .download__logo{
         font-size: 30px;
     }
+    .contact{
+        display: flex;
+    }
+    .item__contact{
+        width: 33.33%;
+    }
+    .email__contact{
+        display: none;
+    }
 }
 
 @keyframes updown {
     0%{
-        top: 180px;
+        top: 0;
     }
     50%{
-        top: 220px;
+        top: 80px;
     }
     100%{
-        top: 180px;
+        top: 0px;
     }
+}
+.webapp:hover{    
+    background-image: url(../assets/img/webapp.png);
+    transition: all 2s ease;
+    background-size: contain;
+}
+.design_web:hover{    
+    background-image: url(../assets/img/diseñoweb.jpg);
+    transition: all 2s ease;
+}
+.ecommerce:hover{    
+    background-image: url(../assets/img/ecommerce.jpg);
+    transition: all 2s ease;
+    background-size: cover;
 }
