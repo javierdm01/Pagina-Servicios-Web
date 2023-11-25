@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav__header">
+            <div class="box-default header__container">
+                <div class="logo">
+                    <p class="logo__name">Code <span class="logo__subname">Wave</span></p>
+                    <i class="fa-solid fa-bars hamburguesa__menu"></i>
+                </div>
+                    <!--Menú-->
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="../index.html" class="menu__link">Inicio</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Servicio</a></li>
+                        <li class="menu__item"><a href="./proyectos.html" class="menu__link">Proyecto</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Clientes</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
+                    </ul>
+            </div>
+        </nav>
+        <!--Fin de la Cabecera-->
+    </header>
+        <main class="main">
+            <div class="contact__box">
+                    <div class="contact__info">
+                        <h1 class="h1_tit">CONTACTA CONMIGO</h1>
+                        <h2 class="h2_tit_2">¿Puedo ayudarte en algo?</h2>
+                        <p class="descripcion_tit">
+                            ¿Tienes alguna pregunta?¡Consúltame!
+                        </p>
+                        <p class="descripcion_tit">
+                            Escríbeme y pregúntame lo que necesites sin ningún compromiso.
+                        </p>
+                    </div>
+                <!--En este article tenemos el formulario de contacto -->
+                    <div class="contac__form">
+                        <h2 class="form__tit">Dime que es lo que necesitas</h2>
+                        <form class="form" action="" >
+                            <div class="form__containter">
+                                <div class="form__rows">
+                                    <input class="input__text" placeholder="Nombre*" required type="text" name="nombre" id="">
+                                    <input class="input__text" placeholder="Email*" required type="email" name="email" id="">
+                                </div>
+                                <div class="form__rows">
+                                    <input class="input__text" placeholder="Telefono" type="tel" name="tel" id="">
+                                    <select class="input__text" name="pais" id="" required>
+                                        <option selected hidden>Elige un país</option>
+                                        <option>España</option>
+                                        <option>Argentina</option>
+                                        <option>Colombia</option>
+                                        <option>EEUU</option>
+                                        <option>Gibraltar</option>
+                                    </select>
+                                </div>
+                                <textarea class="textarea" required name="textarea" id="" cols="40" rows="10" placeholder="Mensaje"></textarea>
+                                <input class="form__enviar" type="submit" src="mailto:daw_javierdiaz@riberadeltajo.es" value="Enviar">
+                            </div>
+                        </form>
+                    </div>
+            </div>
+        </main>
+</body>
+</html>

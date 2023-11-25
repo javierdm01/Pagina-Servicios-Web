@@ -3,65 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos</title>
-    <link rel="stylesheet" href="../css/servicio.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/servicio.css">
+    
+    <title>Servicio</title>
 </head>
-<body>
-    <header class="header">
-        <nav class="nav__header">
-            <div class="box-default header__container">
-                <div class="logo">
-                    <p class="logo__name">Code <span class="logo__subname">Wave</span></p>
-                    <i class="fa-solid fa-bars hamburguesa__menu"></i>
+<body class="body">
+    <div class="container">
+        <header class="header">
+            <nav class="nav__header">
+                <div class="box-default header__container">
+                    <div class="logo">
+                        <p class="logo__name">Code <span class="logo__subname">Wave</span></p>
+                        <i class="fa-solid fa-bars hamburguesa__menu"></i>
+                    </div>
+                        <!--Menú-->
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="../index.html" class="menu__link">Inicio</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Servicio</a></li>
+                            <li class="menu__item"><a href="./proyectos.html" class="menu__link">Proyecto</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Clientes</a></li>
+                            <li class="menu__item"><a href="./contacto.html" class="menu__link">Contacto</a></li>
+                        </ul>
                 </div>
-                    <!--Menú-->
-                    <ul class="menu__list">
-                        <li class="menu__item"><a href="../index.html" class="menu__link">Inicio</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Servicio</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Proyecto</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Clientes</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
-                    </ul>
-            </div>
-        </nav>
-        <!--Fin de la Cabecera-->
-    </header>
-    <main class="main">
-        <h1 class="tit__services">Mis Servicios</h1>
+            </nav>
+            <!--Fin de la Cabecera-->
 
-        <div class="project__container">
-            <div class="project">
-                <img class="project__img img-hover" src="../assets/img/servicio1_2.png" alt="Proyecto 1">
-                <img class="project__img" src="../assets/img/servicio1.png" alt="Proyecto 1">
+            <!--Inicio Home-->
+            <section class="home ">
+                <h1 class="home__title">Servicios</h1>
+            </section>
+            <!--Fin del Home-->
+        </header>
+        <main class="main">
+            <section class="img__services">
+                <div class="carrousel__img">
+                    <div class="valoraciones__card">
+                        <img src="../assets/img/servicio1.png" alt="" class="valoraciones__img">
+                        <div class="servicios__info">
+                            <h3 class="services__title"></h3>
+                        </div>
+                    </div>
+                    <div class="valoraciones__card">
+                        <img src="../assets/img/servicio2.png" alt="" class="valoraciones__img">
+                        <div class="servicios__info">
+                            <h3 class="services__title"></h3>
+                        </div>
+                    </div>
+                    <div class="valoraciones__card">
+                        <img src="../assets/img/servicio3.png" alt="" class="valoraciones__img">
+                        <div class="servicios__info">
+                            <h3 class="services__title"></h3>
+                        </div>
+                    </div>
+                    <div class="valoraciones__card">
+                        <img src="../assets/img/servicio4.png" alt="" class="valoraciones__img">
+                        <div class="servicios__info">
+                            <h3 class="services__title"></h3>
+                        </div>
+                    </div>
+                    <div class="valoraciones__card">
+                        <img src="../assets/img/servicio5.png" alt="" class="valoraciones__img">
+                        <div class="servicios__info">
+                            <h3 class="services__title"></h3>
+                        </div>
+                    </div>
+                    <div class="valoraciones__card">
+                        <img src="../assets/img/servicio4_2.png" alt="" class="valoraciones__img">
+                        <div class="servicios__info">
+                            <h3 class="services__title"></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="agender__img">
+                    <div class="form__container">
+                        <h2 class="agender__title">Agenda una Demo</h2>
+                        <form action="" class="form__agender">
+                            
+                            <div class="form__columns">
+                                <input type="text" class="form__text" placeholder="Nombre">
+                                <input type="email" class="form__text" placeholder="Email">
+                                <input type="tel" class="form__text" placeholder="Telf">
+                            </div>
+                            <div class="form__columns">
+                                <input type="text" class="form__text" placeholder="Apellidos">
+                                <input type="date" class="form__text" placeholder="Fecha">
+                                <a href="" class="form__text form__button">Agendar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--Footer-->
+        <footer class="footer">
+            <div class="box-default footer__container">
+                <section class="download">
+                    <h3 class="title__footer">Descarga nuestra App</h3>
+                    <div class="download__app">
+                        <div class="download__item">
+                            <i class="fa-brands fa-apple download__logo"></i>
+                            <h4 class="download__title">App Strore</h4>
+                        </div>
+                        <div class="download__item">
+                            <i class="fa-brands fa-google-play download__logo"></i>
+                            <h4 class="download__title">Play Store</h4>
+                        </div>
+                    </div>
+                    <div class="footer__copy">
+                        <p class="copyright">Code Wave &copy; 2020 Todos los derechos reservados</p>
+        
+                        <a href="#" class="politica__privacidad politica__privacidad-margin">Politica de privacidad</a>
+                        <a href="#" class="politica__privacidad ">Terminos y condiciones</a>
+                    </div>
+                </section>
+                <section class="get-email">
+                    <h3 class="title__footer">¿Estás listo para trabajar con nostros?</h3>
+                    <form class="newsletter newsletter--modifier">
+                        <input type="text" name="newsletter" id="newsletter" class="newsletter__input" placeholder="Ingresa tu email">
+                        <input type="submit" class="newsletter__submit" value="Comienza Hoy">
+                    </form>
+                    <div class="socialmedia">
+                        <p class="socialmedia__legend">Siguenos en:</p>
+                        <i class="fa-brands fa-facebook socialmedia__icon"></i>
+                        <i class="fa-brands fa-linkedin socialmedia__icon"></i>
+                        <i class="fa-brands fa-twitter socialmedia__icon"></i>
+                        <i class="fa-brands fa-instagram socialmedia__icon"></i>
+                        <i class="fa-brands fa-github socialmedia__icon"></i>
+                    </div>
+                </section>
             </div>
-
-            <div class="project">
-                <img class="project__img img-hover" src="../assets/img/servicio2_2.png" alt="Proyecto 2">
-                <img class="project__img" src="../assets/img/servicio2.png" alt="Proyecto 2">
+            <div class="contact">
+                <div class="item__contact">
+                    <i class='bx bx-copyright contact__icon' ></i>
+                    <h3 class="contact__title">Code Wave</h3>
+                </div>
+                <div class="item__contact email__contact">
+                    <i class='bx bx-mail-send contact__icon' ></i>
+                    <h3 class="contact__title">diazmolinajavier04@gmail.com</h3>
+                </div>
+                <div class="item__contact">
+                    <i class='bx bxs-edit-location contact__icon' ></i>
+                    <h3 class="contact__title"><i class="fa-solid fa-location-dot"></i> Toledo</h3>
+                </div>
+                <div class="item__contact item__contact--gold">
+                    <i class='bx bxs-chat contact__icon contact__icon--modifier' ></i>
+                    <h3 class="contact__title">Contactanos ahora</h3>
+                </div>
             </div>
-
-            <div class="project">
-                <img class="project__img img-hover" src="../assets/img/servicio3_3.png" alt="Proyecto 3">
-                <img class="project__img" src="../assets/img/servicio3.png" alt="Proyecto 3">
-            </div>
-
-            <div class="project">
-                <img class="project__img img-hover" src="../assets/img/servicio4_2.png" alt="Proyecto 4">
-                <img class="project__img" src="../assets/img/servicio4.png" alt="Proyecto 4">
-            </div>
-
-            <div class="project">
-                <img class="project__img img-hover" src="../assets/img/servicio5_5.png" alt="Proyecto 5">
-                <img class="project__img" src="../assets/img/servicio5.png" alt="Proyecto 5">
-            </div>
-
-            <div class="project">
-                <img class="project__img img-hover" src="../assets/img/servicio6_2.png" alt="Proyecto 6">
-                <img class="project__img" src="../assets/img/servicio6.png" alt="Proyecto 6">
-            </div>
-        </div>
-    </main>
-
+        </footer>
+    </div>
 </body>
 </html>
